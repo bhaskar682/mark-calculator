@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Marks Calculator</title>
+    <link rel="stylesheet" href="./main.min.css" />
+  </head>
+  <body>
+    <h1 class="c">Calculate Marks</h1>
+    <aside>
+      <span class="badge badge-secondary">Physics:</span>
+      <input type="number" name="" class="d" value="0" id="phy" /><br />
+      <span class="badge badge-secondary">Chemestry:</span>
+      <input type="number" name="" class="d" value="0" id="che" /><br />
+      <span class="badge badge-secondary">Biology:</span>
+      <input type="number" name="" class="d" value="0" id="bio" /><br />
+      <span class="badge badge-secondary">History:</span>
+      <input type="number" name="" class="d" value="0" id="his" /><br />
+      <span class="badge badge-secondary">Civics:</span>
+      <input type="number" name="" class="d" value="0" id="civ" /><br />
+      <span class="badge badge-secondary">Geography:</span>
+      <input type="number" name="" class="d" value="0" id="geo" /><br />
+      <span class="badge badge-secondary">Economics:</span>
+      <input type="number" name="" class="d" value="0" id="eco" /><br />
+    </aside>
+    <div class="b">
+      <span class="badge badge-secondary"> English:</span>
+      <input type="number" name="" id="eng" class="d" value="0" />
+      <span id="h" class="badge badge-success"></span><br />
+      <span class="badge badge-secondary">Hindi:</span>
+      <input type="number" name="" id="hn" class="d" value="0" /><br />
+      <span class="badge badge-secondary">Math:</span>
+      <input type="number" name="" id="mth" class="d" value="0" /><br />
+      <span class="badge badge-secondary">Scince:</span>
+      <input type="number" name="" id="sc" class="d" value="0" /><br />
+      <span class="badge badge-secondary">Social Scince:</span>
+      <input type="number" name="ss" class="d" id="ss" value="0" /><br />
+      <span class="badge badge-secondary">G.K.:</span>
+      <input type="number" name="" id="gk" class="d" value="0" /><br />
+      <span class="badge badge-secondary">Computer:</span>
+      <input type="number" name="" id="co" class="d" value="0" /><br />
+      <span class="badge badge-secondary">Full Marks:</span>
+      <input type="number" name="" id="fm" class="d" value="1400" /><br />
+    </div>
+    <div class="p">
+      <input
+        type="button"
+        value="Total Marks"
+        id="tol"
+        class="btn btn-primary"
+      /><br /><span class="badge badge-success" id="mess" value="0"></span
+      ><br />
+      <input
+        type="button"
+        value="Percentage (%)"
+        id="per"
+        class="btn btn-primary"
+      /><br />
+      <span class="badge badge-success" id="ma"></span><br />
+      <input
+        type="button"
+        value="Grade"
+        id="gr"
+        class="btn btn-primary"
+      /><br />
+      <span class="badge badge-success" id="pa"></span><br />
+      <input
+        type="button"
+        value=" CGPA "
+        id="cg"
+        class="btn btn-primary"
+      /><br />
+      <span class="badge badge-success" id="pap"></span><br />
+    </div>
+    <br />​
+
+    <script>
+      tol.addEventListener("click", function() {
+        var a = document.getElementById("eng").value;
+        var b = document.getElementById("hn").value;
+        var c = document.getElementById("mth").value;
+        var d = document.getElementById("sc").value;
+        var e = document.getElementById("ss").value;
+        var g = document.getElementById("gk").value;
+        var h = document.getElementById("co").value;
+        var i = document.getElementById("fm").value;
+        var j = document.getElementById("phy").value;
+        var k = document.getElementById("che").value;
+        var l = document.getElementById("bio").value;
+        var m = document.getElementById("his").value;
+        var n = document.getElementById("civ").value;
+        var o = document.getElementById("geo").value;
+        var p = document.getElementById("eco").value;
+        document.getElementById("mess").innerHTML =
+          (a / 2 +
+            b / 2 +
+            c / 2 +
+            d / 2 +
+            e / 2 +
+            g / 2 +
+            h / 2 +
+            j / 2 +
+            k / 2 +
+            l / 2 +
+            m / 2 +
+            n / 2 +
+            o / 2 +
+            p / 2) *
+            2 +
+          " Out of" +
+          " " +
+          i;
+      });
+      per.addEventListener("click", function() {
+        var a = document.getElementById("eng").value;
+        var b = document.getElementById("hn").value;
+        var c = document.getElementById("mth").value;
+        var d = document.getElementById("sc").value;
+        var e = document.getElementById("ss").value;
+        var g = document.getElementById("gk").value;
+        var h = document.getElementById("co").value;
+        var i = document.getElementById("fm").value;
+        var j = document.getElementById("phy").value;
+        var k = document.getElementById("che").value;
+        var l = document.getElementById("bio").value;
+        var m = document.getElementById("his").value;
+        var n = document.getElementById("civ").value;
+        var o = document.getElementById("geo").value;
+        var p = document.getElementById("eco").value;
+        document.getElementById("ma").innerHTML =
+          (((a / 2 +
+            b / 2 +
+            c / 2 +
+            d / 2 +
+            e / 2 +
+            g / 2 +
+            h / 2 +
+            j / 2 +
+            k / 2 +
+            l / 2 +
+            m / 2 +
+            n / 2 +
+            o / 2 +
+            p / 2) *
+            2) /
+            i) *
+            100 +
+          "%";
+      });
+      gr.addEventListener("click", function() {
+        var a = document.getElementById("eng").value;
+        var b = document.getElementById("hn").value;
+        var c = document.getElementById("mth").value;
+        var d = document.getElementById("sc").value;
+        var e = document.getElementById("ss").value;
+        var g = document.getElementById("gk").value;
+        var h = document.getElementById("co").value;
+        var i = document.getElementById("fm").value;
+        var t = document.getElementById("phy").value;
+        var k = document.getElementById("che").value;
+        var l = document.getElementById("bio").value;
+        var m = document.getElementById("his").value;
+        var n = document.getElementById("civ").value;
+        var o = document.getElementById("geo").value;
+        var p = document.getElementById("eco").value;
+        var j =
+          (((a / 2 +
+            b / 2 +
+            c / 2 +
+            d / 2 +
+            e / 2 +
+            g / 2 +
+            h / 2 +
+            t / 2 +
+            k / 2 +
+            l / 2 +
+            m / 2 +
+            n / 2 +
+            o / 2 +
+            p / 2) *
+            2) /
+            i) *
+          100;
+
+        if (j > 90 && j <= 100) {
+          document
+            .getElementById("pa")
+            .setAttribute("style", "background-color:green");
+          document.getElementById("pa").innerHTML = "A+";
+          return false;
+        }
+        if (j > 80 && j <= 90) {
+          document
+            .getElementById("pa")
+            .setAttribute("style", "background-color:green");
+          document.getElementById("pa").innerHTML = "A";
+          return false;
+        }
+        if (j > 70 && j <= 80) {
+          document
+            .getElementById("pa")
+            .setAttribute("style", "background-color:green");
+          document.getElementById("pa").innerHTML = "B+";
+          return false;
+        }
+        if (j > 60 && j <= 70) {
+          document
+            .getElementById("pa")
+            .setAttribute("style", "background-color:green");
+          document.getElementById("pa").innerHTML = "B";
+          return false;
+        }
+        if (j > 50 && j <= 60) {
+          document
+            .getElementById("pa")
+            .setAttribute("style", "background-color:green");
+          document.getElementById("pa").innerHTML = "C+";
+          return false;
+        }
+        if (j > 40 && j <= 50) {
+          document
+            .getElementById("pa")
+            .setAttribute("style", "background-color:green");
+          document.getElementById("pa").innerHTML = "C";
+          return false;
+        }
+        if (j > 30 && j <= 40) {
+          document
+            .getElementById("pa")
+            .setAttribute("style", "background-color:green");
+          document.getElementById("pa").innerHTML = "D";
+          return false;
+        }
+        if (j <= 30) {
+          document
+            .getElementById("pa")
+            .setAttribute("style", "background-color:red");
+          document.getElementById("pa").innerHTML = "E";
+          return false;
+        }
+      });
+      cg.addEventListener("click", function() {
+        var a = document.getElementById("eng").value;
+        var b = document.getElementById("hn").value;
+        var c = document.getElementById("mth").value;
+        var d = document.getElementById("sc").value;
+        var e = document.getElementById("ss").value;
+        var g = document.getElementById("gk").value;
+        var h = document.getElementById("co").value;
+        var i = document.getElementById("fm").value;
+        var t = document.getElementById("phy").value;
+        var k = document.getElementById("che").value;
+        var l = document.getElementById("bio").value;
+        var m = document.getElementById("his").value;
+        var n = document.getElementById("civ").value;
+        var o = document.getElementById("geo").value;
+        var p = document.getElementById("eco").value;
+        var j =
+          (((a / 2 +
+            b / 2 +
+            c / 2 +
+            d / 2 +
+            e / 2 +
+            g / 2 +
+            h / 2 +
+            t / 2 +
+            k / 2 +
+            l / 2 +
+            m / 2 +
+            n / 2 +
+            o / 2 +
+            p / 2) *
+            2) /
+            i) *
+          100;
+        if (j > 90 && j <= 100) {
+          document
+            .getElementById("pap")
+            .setAttribute("style", "background-color:green");
+          document.getElementById("pap").innerHTML = "10 CGPA";
+          return false;
+        }
+        if (j > 80 && j <= 90) {
+          document
+            .getElementById("pap")
+            .setAttribute("style", "background-color:green");
+          document.getElementById("pap").innerHTML = "9 CGPA";
+          return false;
+        }
+        if (j > 70 && j <= 80) {
+          document
+            .getElementById("pap")
+            .setAttribute("style", "background-color:green");
+          document.getElementById("pap").innerHTML = "8 CGPA";
+          return false;
+        }
+        if (j > 60 && j <= 70) {
+          document
+            .getElementById("pap")
+            .setAttribute("style", "background-color:green");
+          document.getElementById("pap").innerHTML = "7 CGPA";
+          return false;
+        }
+        if (j > 50 && j <= 60) {
+          document
+            .getElementById("pap")
+            .setAttribute("style", "background-color:green");
+          document.getElementById("pap").innerHTML = "6 CGPA";
+          return false;
+        }
+        if (j > 40 && j <= 50) {
+          document
+            .getElementById("pap")
+            .setAttribute("style", "background-color:green");
+          document.getElementById("pap").innerHTML = "5 CGPA";
+          return false;
+        }
+        if (j > 30 && j <= 40) {
+          document
+            .getElementById("pap")
+            .setAttribute("style", "background-color:green");
+          document.getElementById("pap").innerHTML = "4 CGPA";
+          return false;
+        }
+        if (j <= 30) {
+          document
+            .getElementById("pap")
+            .setAttribute("style", "background-color:red");
+          document.getElementById("pap").innerHTML =
+            " You are fail !!...................";
+          return false;
+        }
+      });
+      var a = document.getElementById("eng").value;
+      var b = document.getElementById("hn").value;
+      var c = document.getElementById("mth").value;
+      var d = document.getElementById("sc").value;
+      var e = document.getElementById("ss").value;
+      var g = document.getElementById("gk").value;
+      var h = document.getElementById("co").value;
+      var i = document.getElementById("fm").value;
+      var t = document.getElementById("phy").value;
+      var k = document.getElementById("che").value;
+      var l = document.getElementById("bio").value;
+      var m = document.getElementById("his").value;
+      var n = document.getElementById("civ").value;
+      var o = document.getElementById("geo").value;
+      var p = document.getElementById("eco").value;
+      sc.addEventListener("keypress", function() {
+        phy.setAttribute("disabled", "true");
+        phy.setAttribute("style", "background-color:#6c757d;");
+        che.setAttribute("disabled", "true");
+        bio.setAttribute("disabled", "true");
+        che.setAttribute("style", "background-color:#6c757d;");
+        bio.setAttribute("style", "background-color:#6c757d;");
+        fm.value = i - 300;
+      });
+
+      ss.addEventListener("keypress", function() {
+        his.setAttribute("disabled", "true");
+        civ.setAttribute("disabled", "true");
+        geo.setAttribute("disabled", "true");
+        eco.setAttribute("disabled", "true");
+        his.setAttribute("style", "background-color:#6c757d;");
+        geo.setAttribute("style", "background-color:#6c757d;");
+        civ.setAttribute("style", "background-color:#6c757d;");
+        eco.setAttribute("style", "background-color:#6c757d;");
+        fm.value = i - 400;
+      });
+      phy.addEventListener("keypress", function() {
+        sc.setAttribute("disabled", "true");
+        sc.setAttribute("style", "background-color:#6c757d;");
+      });
+      che.addEventListener("keypress", function() {
+        sc.setAttribute("disabled", "true");
+        sc.setAttribute("style", "background-color:#6c757d;");
+      });
+      bio.addEventListener("keypress", function() {
+        sc.setAttribute("disabled", "true");
+        sc.setAttribute("style", "background-color:#6c757d;");
+      });
+      his.addEventListener("keypress", function() {
+        ss.setAttribute("disabled", "true");
+        ss.setAttribute("style", "background-color:#6c757d;");
+      });
+      geo.addEventListener("keypress", function() {
+        ss.setAttribute("disabled", "true");
+        ss.setAttribute("style", "background-color:#6c757d;");
+      });
+      civ.addEventListener("keypress", function() {
+        ss.setAttribute("disabled", "true");
+        ss.setAttribute("style", "background-color:#6c757d;");
+      });
+      eco.addEventListener("keypress", function() {
+        ss.setAttribute("disabled", "true");
+        ss.setAttribute("style", "background-color:#6c757d;");
+      });
+    </script>
+  </body>
+</html>
